@@ -15,7 +15,7 @@ minify:
 params:
   env: production
   title: SomethingWentWrong.dev
-  description: "Real-world automation from production chaos"
+  description: "Real-world automation from production"
   keywords: [PowerShell, Power Apps, M365, Exchange, Azure, Automation]
   author: Przemek
   
