@@ -1,0 +1,105 @@
+baseURL: "https://somethingwentwrong.dev/"
+title: SomethingWentWrong.dev
+theme: PaperMod
+languageCode: en-us
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production
+  title: SomethingWentWrong.dev
+  description: "Real-world automation from production chaos"
+  keywords: [PowerShell, Power Apps, M365, Exchange, Azure, Automation]
+  author: Przemek
+  
+  defaultTheme: dark # auto, light, dark
+  disableThemeToggle: false
+  
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
+
+  assets:
+    disableHLJS: true # highlight.js - wyłączone, używamy Chroma
+    disableFingerprinting: true
+    
+  label:
+    text: "SomethingWentWrong.dev"
+    icon: /favicon.ico
+    iconHeight: 35
+
+  homeInfoParams:
+    Title: "Real cases from production environments"
+    Content: >
+      
+      Step by step (more or less) guides for PowerShell, Graph API, 
+      Power Platform.. generally M365 cases that Microsoft docs don't cover.
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/twoj-username"
+    - name: linkedin
+      url: "https://linkedin.com/in/twoj-profil"
+    - name: rss
+      url: "index.xml"
+
+  cover:
+    hidden: true
+    hiddenInList: true
+    hiddenInSingle: true
+
+  editPost:
+    URL: "https://github.com/twoj-username/somethingwentwrong/tree/main/content"
+    Text: "Suggest Changes"
+    appendFilePath: true
+
+menu:
+  main:
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 30
+
+markup:
+  highlight:
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: false
+    lineNos: true
+    lineNumbersInTable: true
+    noClasses: false
+    style: monokai
+    tabWidth: 4
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
