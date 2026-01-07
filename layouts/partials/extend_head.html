@@ -1,0 +1,143 @@
+<!-- No Light Mode Modal -->
+<style>
+.no-light-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #0a0a0a;
+    border: 2px solid #404040;
+    padding: 2rem;
+    border-radius: 8px;
+    z-index: 9999;
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.9);
+    max-width: 400px;
+    text-align: center;
+}
+
+.no-light-modal.show {
+    display: block;
+    animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -45%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.no-light-modal p {
+    color: #b0b0b0;
+    margin: 1rem 0;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.no-light-modal p.subtitle {
+    color: #666;
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+.no-light-modal button {
+    background: #1a1a1a;
+    border: 1px solid #404040;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #888;
+    font-weight: normal;
+    font-size: 1rem;
+    margin-top: 1rem;
+    transition: all 0.2s ease;
+}
+
+.no-light-modal button:hover {
+    background: #252525;
+    border-color: #555;
+    color: #aaa;
+}
+
+.modal-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9998;
+}
+
+.modal-backdrop.show {
+    display: block;
+    animation: backdropFadeIn 0.3s ease;
+}
+
+@keyframes backdropFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+</style>
+
+<div class="modal-backdrop" id="modal-backdrop" onclick="closeNoLightModal()"></div>
+<div class="no-light-modal" id="no-light-modal">
+    <p>There is no light out here.</p>
+    <p class="subtitle">Dark mode is the only mode.</p>
+    <button onclick="closeNoLightModal()">Accept</button>
+</div>
+
+<script>
+function closeNoLightModal() {
+    document.getElementById('no-light-modal').classList.remove('show');
+    document.getElementById('modal-backdrop').classList.remove('show');
+    
+    // Force dark mode
+    document.body.classList.remove('light');
+    document.body.classList.add('dark');
+    localStorage.setItem('pref-theme', 'dark');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const themeToggle = document.getElementById('theme-toggle') || 
+                       document.querySelector('[aria-label*="theme"]') ||
+                       document.querySelector('.theme-toggle');
+    
+    if (themeToggle) {
+        themeToggle.setAttribute('title', 'There is no light out here');
+        
+        themeToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Show modal
+            document.getElementById('no-light-modal').classList.add('show');
+            document.getElementById('modal-backdrop').classList.add('show');
+            
+            // Force dark
+            document.body.classList.remove('light');
+            document.body.classList.add('dark');
+            localStorage.setItem('pref-theme', 'dark');
+            
+            return false;
+        }, true);
+    }
+    
+    // Enforce dark on load
+    document.body.classList.remove('light');
+    document.body.classList.add('dark');
+    localStorage.setItem('pref-theme', 'dark');
+});
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeNoLightModal();
+    }
+});
+</script>
