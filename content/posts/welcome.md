@@ -1,7 +1,7 @@
 ---
 title: "Something Went Wrong - And That's The Point"
 date: 2026-01-07
-draft: false
+draft: true
 tags: ["meta"]
 ---
 
