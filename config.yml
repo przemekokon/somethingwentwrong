@@ -48,7 +48,7 @@ params:
     iconHeight: 35
 
   homeInfoParams:
-    Title: "Real cases from production environments"
+    Title: "I learn from the mistakes of those who follow my advice."
     Content: >
       
       Step by step (more or less) guides for PowerShell, Graph API, 

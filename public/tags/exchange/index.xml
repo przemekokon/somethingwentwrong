@@ -6,12 +6,12 @@
     <description>Recent content in Exchange on SomethingWentWrong.dev</description>
     <generator>Hugo -- 0.153.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/exchange/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Updating Distribution List Extended Attributes with PowerShell</title>
       <link>http://localhost:1313/posts/msatt20/</link>
-      <pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/msatt20/</guid>
       <description>&lt;h2 id=&#34;the-easy-part&#34;&gt;The easy part&lt;/h2&gt;
 &lt;p&gt;Creating distribution lists in bulk is quite simple.&lt;/p&gt;

@@ -23,7 +23,3 @@ Find me on:
 - [LinkedIn](http://www.linkedin.com/in/przemek-okon)
 
 Questions about a post? See that "Suggest Changes" link at the bottom? That goes to GitHub - open an issue or PR.
-
----
-
-*"I learn from the mistakes of those who follow my advice."*
