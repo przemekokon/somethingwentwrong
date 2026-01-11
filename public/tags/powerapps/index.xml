@@ -6,12 +6,12 @@
     <description>Recent content in Powerapps on SomethingWentWrong.dev</description>
     <generator>Hugo -- 0.153.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 11 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/powerapps/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Get Rid of Power Apps Permissions Consent Form</title>
       <link>http://localhost:1313/posts/power_apps_consent/</link>
-      <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/power_apps_consent/</guid>
       <description>&lt;h2 id=&#34;permissions-consent-pop-up&#34;&gt;Permissions Consent Pop-up&lt;/h2&gt;
 &lt;p&gt;Every new user must approve permissions when accessing an app. Existing users see this prompt again after app logic or connector updates.&lt;/p&gt;

@@ -64,6 +64,8 @@ params:
       url: "https://github.com/przemekokon"
     - name: linkedin
       url: "http://www.linkedin.com/in/przemek-okon"
+    - name: email
+      url: "mailto:przemek@somethingwentwrong.dev"
     - name: rss
       url: "index.xml"
 
@@ -73,7 +75,7 @@ params:
     hiddenInSingle: true
 
   editPost:
-    URL: "https://github.com/twoj-username/somethingwentwrong/tree/main/content"
+    URL: "https://github.com/przemekokon/somethingwentwrong/tree/main/content"
     Text: "Suggest Changes"
     appendFilePath: true
 

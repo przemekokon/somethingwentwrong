@@ -1,6 +1,6 @@
 ---
 title: "How to Get Rid of Power Apps Permissions Consent Form"
-date: 2026-01-10
+date: 2026-01-11
 draft: false
 tags: ["powershell", "powerapps"]
 showtoc: false
