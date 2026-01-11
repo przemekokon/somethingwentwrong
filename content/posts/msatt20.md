@@ -3,6 +3,7 @@ title: "Updating Distribution List Extended Attributes with PowerShell"
 date: 2026-01-02
 draft: false
 tags: ["powershell", "exchange", "on-prem"]
+showtoc: false
 ---
 
 ## The easy part
@@ -91,6 +92,35 @@ foreach ($g in $groups) {
 ```
 
 We can filter for any other property - as long as it's uniqe (and covered in a CSV). Just update script's line 7.
+
+## Clearing the Attribute
+
+To remove the value from msExchExtensionAttribute20:
+
+**Single group:**
+```powershell
+Get-ADGroup -Filter "mail -eq 'Another.Fancy.Group@example.com'" |
+    Set-ADGroup -Clear msExchExtensionAttribute20
+```
+
+**Bulk clear from CSV:**
+```powershell
+$groups = Import-Csv .\groups.csv
+
+foreach ($g in $groups) {
+    $group = Get-ADGroup -Filter "mail -eq '$($g.mail)'" -Properties mail
+
+    if ($group) {
+        Set-ADGroup -Identity $group.DistinguishedName -Clear msExchExtensionAttribute20
+        Write-Host "OK: $($g.mail) -> msExchExtensionAttribute20 cleared" -ForegroundColor Green
+    }
+    else {
+        Write-Host "ERROR: DL not found $($g.mail)" -ForegroundColor Red
+    }
+}
+```
+
+---
 
 ## Summary
 

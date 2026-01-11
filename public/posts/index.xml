@@ -6,8 +6,79 @@
     <description>Recent content in Posts on SomethingWentWrong.dev</description>
     <generator>Hugo -- 0.153.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Assign Calendar Permissions in Bulk</title>
+      <link>http://localhost:1313/posts/room_perm_bulk/</link>
+      <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/room_perm_bulk/</guid>
+      <description>&lt;h2 id=&#34;just-a-simple-one-liner&#34;&gt;Just a simple one-liner&lt;/h2&gt;
+&lt;p&gt;When you have many room mailboxes, granting someone access to each room calendar one-by-one is painful. This one-liner reads a list of room SMTP addresses from a text file and applies the same permission to each mailbox calendar.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Get-Content&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rooms&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;txt&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nb&#34;&gt;Write-Host&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Working on &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$_&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-ForegroundColor&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Cyan&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nb&#34;&gt;Add-MailboxFolderPermission&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-Identity&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$_&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;Trim&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;:\Calendar&amp;#34;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-User&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;przemek@contoso.com&amp;#34;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-AccessRights&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Reviewer&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;notes&#34;&gt;Notes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Text file we import via &lt;code&gt;Get-Content&lt;/code&gt; contains a room email address per line&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.Trim&lt;/code&gt; is being used to remove blank spaces in TXT file - (&amp;rsquo; &lt;a href=&#34;mailto:room@contoso.com&#34;&gt;room@contoso.com&lt;/a&gt;&amp;rsquo; -&amp;gt; &amp;lsquo;&lt;a href=&#34;mailto:room@contoso.com&#34;&gt;room@contoso.com&lt;/a&gt;&amp;rsquo;) - it&amp;rsquo;s just a safety feature I like to use&lt;/li&gt;
+&lt;li&gt;In some tenants, the calendar folder name might be localized (for example &amp;ldquo;Kalendarz&amp;rdquo; in Poland, &amp;ldquo;Kalender&amp;rdquo; in  Germany and &amp;ldquo;Calendier&amp;rdquo; for France)&lt;/li&gt;
+&lt;li&gt;If permissions are already granted for an user, you need to either remove these and re-add or use &lt;code&gt;Set-MailboxFolderPermissions&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>How to Get Rid of Power Apps Permissions Consent Form</title>
+      <link>http://localhost:1313/posts/power_apps_consent/</link>
+      <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/power_apps_consent/</guid>
+      <description>&lt;h2 id=&#34;permissions-consent-pop-up&#34;&gt;Permissions Consent Pop-up&lt;/h2&gt;
+&lt;p&gt;Every new user must approve permissions when accessing an app. Existing users see this prompt again after app logic or connector updates.&lt;/p&gt;
+&lt;figure&gt;
+     &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/consent.png&#34;
+          alt=&#34;Power Apps Grant Consent&#34;/&gt; &lt;figcaption&gt;
+             &lt;p&gt;App permissions consent pop-up&lt;/p&gt;
+         &lt;/figcaption&gt;
+ &lt;/figure&gt;
+
+&lt;p&gt;In most scenarios, this pop-up can be bypassed.&lt;/p&gt;
+&lt;h2 id=&#34;hiding-consent-pop-up&#34;&gt;Hiding consent pop-up&lt;/h2&gt;
+&lt;p&gt;This requries a single PowerShell command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;nb&#34;&gt;Set-AdminPowerAppApisToBypassConsent&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-EnvironmentName&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;Guid&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-AppName&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;Guid&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Expected result:
+&lt;figure&gt;
+     &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/bypass_result.png&#34;
+          alt=&#34;Power Apps Grant Consent&#34;/&gt; 
+ &lt;/figure&gt;
+
+&lt;figure&gt;
+     &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/bypass.png&#34;
+          alt=&#34;Power Apps Grant Consent&#34;/&gt; &lt;figcaption&gt;
+             &lt;p&gt;BypassConsent flag is set&lt;/p&gt;
+         &lt;/figcaption&gt;
+ &lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;We can get guids using PowerShell:&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Updating Distribution List Extended Attributes with PowerShell</title>
       <link>http://localhost:1313/posts/msatt20/</link>

@@ -15,7 +15,7 @@ minify:
 params:
   env: production
   title: SomethingWentWrong.dev
-  description: "Real-world automation from production"
+  description: "Real-world problems from production"
   keywords: [PowerShell, Power Apps, M365, Exchange, Azure, Automation]
   author: Przemek
   
@@ -48,17 +48,22 @@ params:
     iconHeight: 35
 
   homeInfoParams:
-    Title: "I learn from the mistakes of those who follow my advice."
-    Content: >
+    Title: This is my technical scratchpad. 
       
-      Step by step (more or less) guides for PowerShell, Graph API, 
-      Power Platform.. generally M365 cases that Microsoft docs don't cover.
+    Content: >
+      You'll find here PowerShell, Graph API, Microsoft Office Copilot 365 stuff (whatever it's called today).
+
+
+      If something here helps you - great.
+
+
+      If it breaks your production - sorry, but I learn from the mistakes of those who follow my advice.
 
   socialIcons:
     - name: github
-      url: "https://github.com/twoj-username"
+      url: "https://github.com/przemekokon"
     - name: linkedin
-      url: "https://linkedin.com/in/twoj-profil"
+      url: "http://www.linkedin.com/in/przemek-okon"
     - name: rss
       url: "index.xml"
 
