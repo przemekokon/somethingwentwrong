@@ -2,6 +2,7 @@
 title: "About"
 url: "/about/"
 summary: "Who writes this and why"
+showtoc: false
 ---
 
 ## Hi, I'm Przemek
