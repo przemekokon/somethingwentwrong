@@ -52,6 +52,23 @@ This does NOT grant tenant-level delegated access (like an Entra registered app)
 - Does not work for third-party connectors (like Slack or Smartsheet)
 - Connectors must use OAuth or No Auth
 
+## Power Automate flows require separate consent
+
+Bypassing consent for the PowerApp **does not automatically handle Power Automate flows** triggered from the app.
+
+**What happens:**
+- The app works correctly (displays data, buttons respond)
+- App shows flow related errors
+- Flow audit log shows authentication/connection failures
+
+**Why this occurs:**
+- Power Apps and Power Automate have separate consent mechanisms
+- Flows execute in the user's context and require their own connection references
+- Each user needs established connections to the connectors used in flows (Sending E-mails, Approvals etc.)
+- Bypassing app consent doesn't create these flow connections automatically
+
+This is a separate configuration challenge that requires additional setup beyond the app consent bypass. It will be covered in another blog post.
+
 ## Notes
 
 - These commands are available in module: `Microsoft.PowerApps.Administration.PowerShell`
