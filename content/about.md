@@ -5,7 +5,7 @@ summary: "Who writes this and why"
 showtoc: false
 ---
 
-## Hi
+## Hello there,
 
 Something went wrong and I became an engineer instead of a nepo baby.
 
@@ -18,4 +18,4 @@ Find me on:
 - [LinkedIn](http://www.linkedin.com/in/przemek-okon)
 - Mail: przemek@somethingwentwrong.dev
 
-Questions about a post? See that "Suggest Changes" link at the bottom? That goes to GitHub - open an issue or PR.
+Questions about a post? See that "Suggest Changes" link at the bottom? That goes to GitHub - open an issue or PR. Or just write me an email, I like emails.

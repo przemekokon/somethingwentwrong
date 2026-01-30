@@ -41,7 +41,7 @@ Exterminate.
 Invoke-MgGraphRequest -Method DELETE -Uri "https://graph.microsoft.com/beta/directoryObjects/<ID>"
 ```
 
-## More or less important Notes
+## More or Less Important Notes
 
 - Graph API deletions are immediate - there's no confirmation prompt, so triple-check that ID
 - Here is how a sample uri looks like:
