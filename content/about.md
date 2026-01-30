@@ -5,17 +5,11 @@ summary: "Who writes this and why"
 showtoc: false
 ---
 
-## Hi, I'm Przemek
+## Hi
 
 Something went wrong and I became an engineer instead of a nepo baby.
 
-By day, I manage cloud infrastructure and try to automate things for a large enterprise. By night, I document the problems that made me question my life choices.
-
-## Why This Blog?
-
-I'm still figuring that out. 
-
-If I come up with something that sounds good on LinkedIn, I'll update this section.
+Sometimes I document here some of the problems that made me question my life choices.
 
 ## Contact
 
