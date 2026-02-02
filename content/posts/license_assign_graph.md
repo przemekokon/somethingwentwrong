@@ -15,9 +15,11 @@ Get-Content <file path> | foreach {Set-MgUserLicense -UserId $_ -AddLicenses @{S
 Remove:
 
 ```powershell
-Get-Content C:\Temp\mm.txt | foreach {Set-MgUserLicense -UserId $_ -RemoveLicenses @('3db7c7ead579...') -AddLicenses @{}}
+Get-Content <file path> | foreach {Set-MgUserLicense -UserId $_ -RemoveLicenses @('3db7c7ead579...') -AddLicenses @{}}
 ```
 
 Check for a license SkuId:
 
 `Get-MgUserLicenseDetail -UserId <UPN>`or`Get-MgSubscribedSku | fl SkuPartNumber, skuid`
+
+- File path is a TXT file containing UPNs one-per-line.
