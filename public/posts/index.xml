@@ -2,30 +2,80 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on SomethingWentWrong.dev</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>http://localhost:58330/posts/</link>
     <description>Recent content in Posts on SomethingWentWrong.dev</description>
     <generator>Hugo -- 0.153.2</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 26 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:58330/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>How to Force Remove Contact in Microsoft 365 with PowerShell</title>
-      <link>http://localhost:1313/posts/mail_contact_delete/</link>
+      <title>Assign licenses in bulk via Graph API</title>
+      <link>http://localhost:58330/posts/license_assign_graph/</link>
       <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/mail_contact_delete/</guid>
+      <guid>http://localhost:58330/posts/license_assign_graph/</guid>
+      <description>&lt;p&gt;Add:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Get-Content&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;file&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;foreach&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Set-MgUserLicense&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-UserId&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$_&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-AddLicenses&lt;/span&gt; &lt;span class=&#34;vm&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SkuID&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;2ced8a00...&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-RemoveLicenses&lt;/span&gt; &lt;span class=&#34;vm&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Remove:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Get-Content&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;file&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;foreach&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Set-MgUserLicense&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-UserId&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$_&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-RemoveLicenses&lt;/span&gt; &lt;span class=&#34;vm&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;3db7c7ead579...&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-AddLicenses&lt;/span&gt; &lt;span class=&#34;vm&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Check for a license SkuId:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Get-MgUserLicenseDetail -UserId &amp;lt;UPN&amp;gt;&lt;/code&gt;or&lt;code&gt;Get-MgSubscribedSku | fl SkuPartNumber, skuid&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;File path is a TXT file containing UPNs one-per-line.&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Force Removal Orphaned Contact in Microsoft 365</title>
+      <link>http://localhost:58330/posts/mail_contact_delete/</link>
+      <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:58330/posts/mail_contact_delete/</guid>
       <description>&lt;h2 id=&#34;the-problem&#34;&gt;The Problem&lt;/h2&gt;
-&lt;p&gt;You&amp;rsquo;ve probably been there: trying to restore a user from the recycle bin, only to discover a conflict object blocking your way. You attempt to delete it through the usual channels, and boom - Exchange slaps you with an error that basically says &amp;ldquo;nope, not happening.&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;The standard &lt;code&gt;Remove-MailContact&lt;/code&gt; cmdlet just won&amp;rsquo;t cut it when dealing with these stubborn objects. That&amp;rsquo;s where Microsoft Graph API comes to the rescue.&lt;/p&gt;</description>
+&lt;p&gt;Classic Exchange Online scenario - trying to remove an orphaned (maybe used to be synced) object.&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:58330/images/contact_removal_error.png&#34;
+         alt=&#34;Error message when trying to remove contact&#34;/&gt; &lt;figcaption&gt;
+            &lt;p&gt;Getting slapped in the face with error&lt;/p&gt;
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;the-solution&#34;&gt;The Solution&lt;/h2&gt;
+&lt;p&gt;Two words: Graph API.&lt;/p&gt;
+&lt;h3 id=&#34;step-1-get-the-mail-contact-id&#34;&gt;Step 1: Get the Mail Contact ID&lt;/h3&gt;
+&lt;p&gt;First, we need to identify the exact object we&amp;rsquo;re dealing with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Get-MailContact&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lorem&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ipsum&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;@contoso&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;com&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Format-List&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Id&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This will give the unique identifier for the mail contact.&lt;/p&gt;
+&lt;h3 id=&#34;step-2-verify-the-object-in-graph-api&#34;&gt;Step 2: Verify the Object in Graph API&lt;/h3&gt;
+&lt;p&gt;Better safe than sorry- let&amp;rsquo;s do a double check. Replace &lt;code&gt;&amp;lt;ID&amp;gt;&lt;/code&gt; with the ID from Step 1:&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Get Rid of Power Apps Permissions Consent Form</title>
-      <link>http://localhost:1313/posts/power_apps_consent/</link>
+      <link>http://localhost:58330/posts/power_apps_consent/</link>
       <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/power_apps_consent/</guid>
+      <guid>http://localhost:58330/posts/power_apps_consent/</guid>
       <description>&lt;h2 id=&#34;permissions-consent-pop-up&#34;&gt;Permissions Consent Pop-up&lt;/h2&gt;
 &lt;p&gt;Every new user must approve permissions when accessing an app. Existing users see this prompt again after app logic or connector updates.&lt;/p&gt;
 &lt;figure&gt;
-     &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/consent.png&#34;
+     &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:58330/images/consent.png&#34;
           alt=&#34;Power Apps Grant Consent&#34;/&gt; &lt;figcaption&gt;
              &lt;p&gt;App permissions consent pop-up&lt;/p&gt;
          &lt;/figcaption&gt;
@@ -44,12 +94,12 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;Expected result:
 &lt;figure&gt;
-     &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/bypass_result.png&#34;
+     &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:58330/images/bypass_result.png&#34;
           alt=&#34;Power Apps Grant Consent&#34;/&gt; 
  &lt;/figure&gt;
 
 &lt;figure&gt;
-     &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/bypass.png&#34;
+     &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:58330/images/bypass.png&#34;
           alt=&#34;Power Apps Grant Consent&#34;/&gt; &lt;figcaption&gt;
              &lt;p&gt;BypassConsent flag is set&lt;/p&gt;
          &lt;/figcaption&gt;
@@ -59,9 +109,9 @@
     </item>
     <item>
       <title>Assign Calendar Permissions in Bulk</title>
-      <link>http://localhost:1313/posts/room_perm_bulk/</link>
+      <link>http://localhost:58330/posts/room_perm_bulk/</link>
       <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/room_perm_bulk/</guid>
+      <guid>http://localhost:58330/posts/room_perm_bulk/</guid>
       <description>&lt;h2 id=&#34;just-a-simple-one-liner&#34;&gt;Just a simple one-liner&lt;/h2&gt;
 &lt;p&gt;When you have many room mailboxes, granting someone access to each room calendar one-by-one is painful. This one-liner reads a list of room SMTP addresses from a text file and applies the same permission to each mailbox calendar.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -90,9 +140,9 @@
     </item>
     <item>
       <title>Updating Distribution List Extended Attributes with PowerShell</title>
-      <link>http://localhost:1313/posts/msatt20/</link>
+      <link>http://localhost:58330/posts/msatt20/</link>
       <pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/msatt20/</guid>
+      <guid>http://localhost:58330/posts/msatt20/</guid>
       <description>&lt;h2 id=&#34;the-easy-part&#34;&gt;The easy part&lt;/h2&gt;
 &lt;p&gt;Creating distribution lists in bulk is quite simple.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Just a CSV file:&lt;/strong&gt;&lt;/p&gt;

@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on SomethingWentWrong.dev</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>http://localhost:58330/tags/</link>
     <description>Recent content in Tags on SomethingWentWrong.dev</description>
     <generator>Hugo -- 0.153.2</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 26 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:58330/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Exchange</title>
-      <link>http://localhost:1313/tags/exchange/</link>
+      <link>http://localhost:58330/tags/exchange/</link>
       <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/exchange/</guid>
+      <guid>http://localhost:58330/tags/exchange/</guid>
       <description></description>
     </item>
     <item>
       <title>Graph-Api</title>
-      <link>http://localhost:1313/tags/graph-api/</link>
+      <link>http://localhost:58330/tags/graph-api/</link>
       <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/graph-api/</guid>
+      <guid>http://localhost:58330/tags/graph-api/</guid>
       <description></description>
     </item>
     <item>
       <title>Microsoft365</title>
-      <link>http://localhost:1313/tags/microsoft365/</link>
+      <link>http://localhost:58330/tags/microsoft365/</link>
       <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/microsoft365/</guid>
+      <guid>http://localhost:58330/tags/microsoft365/</guid>
       <description></description>
     </item>
     <item>
       <title>Powershell</title>
-      <link>http://localhost:1313/tags/powershell/</link>
+      <link>http://localhost:58330/tags/powershell/</link>
       <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/powershell/</guid>
+      <guid>http://localhost:58330/tags/powershell/</guid>
       <description></description>
     </item>
     <item>
       <title>Powerapps</title>
-      <link>http://localhost:1313/tags/powerapps/</link>
+      <link>http://localhost:58330/tags/powerapps/</link>
       <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/powerapps/</guid>
+      <guid>http://localhost:58330/tags/powerapps/</guid>
       <description></description>
     </item>
     <item>
       <title>On-Prem</title>
-      <link>http://localhost:1313/tags/on-prem/</link>
+      <link>http://localhost:58330/tags/on-prem/</link>
       <pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/on-prem/</guid>
+      <guid>http://localhost:58330/tags/on-prem/</guid>
       <description></description>
     </item>
   </channel>
