@@ -2,50 +2,65 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:58330/posts/license_assign_graph/</loc>
+    <loc>http://localhost:65392/tags/exchange/</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:65392/tags/graph-api/</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:65392/posts/</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:65392/posts/dls_members_count/</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:65392/</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:65392/tags/</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:65392/tags/ai/</loc>
+    <lastmod>2026-02-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:65392/tags/automation/</loc>
+    <lastmod>2026-02-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:65392/tags/powerautomate/</loc>
+    <lastmod>2026-02-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:65392/posts/power_automate_ai/</loc>
+    <lastmod>2026-02-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:65392/posts/license_assign_graph/</loc>
     <lastmod>2026-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:58330/tags/exchange/</loc>
+    <loc>http://localhost:65392/posts/mail_contact_delete/</loc>
     <lastmod>2026-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:58330/posts/mail_contact_delete/</loc>
+    <loc>http://localhost:65392/tags/microsoft365/</loc>
     <lastmod>2026-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:58330/tags/graph-api/</loc>
+    <loc>http://localhost:65392/tags/powershell/</loc>
     <lastmod>2026-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:58330/tags/microsoft365/</loc>
-    <lastmod>2026-01-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:58330/posts/</loc>
-    <lastmod>2026-01-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:58330/tags/powershell/</loc>
-    <lastmod>2026-01-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:58330/</loc>
-    <lastmod>2026-01-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:58330/tags/</loc>
-    <lastmod>2026-01-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:58330/posts/power_apps_consent/</loc>
+    <loc>http://localhost:65392/posts/power_apps_consent/</loc>
     <lastmod>2026-01-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:58330/tags/powerapps/</loc>
+    <loc>http://localhost:65392/tags/powerapps/</loc>
     <lastmod>2026-01-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:58330/posts/room_perm_bulk/</loc>
+    <loc>http://localhost:65392/posts/room_perm_bulk/</loc>
     <lastmod>2026-01-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:58330/tags/on-prem/</loc>
+    <loc>http://localhost:65392/tags/on-prem/</loc>
     <lastmod>2026-01-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:58330/posts/msatt20/</loc>
+    <loc>http://localhost:65392/posts/msatt20/</loc>
     <lastmod>2026-01-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:58330/about/</loc>
+    <loc>http://localhost:65392/categories/</loc>
   </url><url>
-    <loc>http://localhost:58330/categories/</loc>
+    <loc>http://localhost:65392/contact/</loc>
   </url>
 </urlset>

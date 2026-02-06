@@ -24,7 +24,7 @@ params:
   
   ShowReadingTime: true
   ShowShareButtons: false
-  ShowPostNavLinks: true
+  ShowPostNavLinks: false
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
   ShowWordCount: true
@@ -52,12 +52,6 @@ params:
       
     Content: >
       You'll find here PowerShell, Graph API, Microsoft Office Copilot 365 stuff (whatever it's called today).
-
-
-      If something here helps you - great.
-
-
-      If it breaks your production - sorry, but I learn from the mistakes of those who follow my advice.
 
   socialIcons:
     - name: github
@@ -89,9 +83,9 @@ menu:
       name: Tags
       url: /tags/
       weight: 20
-    - identifier: about
-      name: About
-      url: /about/
+    - identifier: contact
+      name: Contact
+      url: /contact/
       weight: 30
 
 markup:
