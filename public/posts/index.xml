@@ -2,31 +2,42 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on SomethingWentWrong.dev</title>
-    <link>http://localhost:65392/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on SomethingWentWrong.dev</description>
     <generator>Hugo -- 0.153.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:65392/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Get SharePoint Item ID Using Microsoft Graph API</title>
+      <link>http://localhost:1313/posts/get_sp_item_id/</link>
+      <pubDate>Sun, 08 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/get_sp_item_id/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;When working with Microsoft Graph API to automate SharePoint operations (like writing script outputs, saving reports, updating Excel files), we can&amp;rsquo;t just use file paths. We need to work with unique identifiers - specifically - the file ID.&lt;/p&gt;
+&lt;p&gt;This guide walks you through the process of finding a SharePoint item ID by navigating the site hierarchy using Graph API Explorer.&lt;/p&gt;
+&lt;h2 id=&#34;the-goal&#34;&gt;The Goal&lt;/h2&gt;
+&lt;p&gt;In this example, we&amp;rsquo;ll find the ID of an Excel file located deep within a SharePoint site structure:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Recursive Member Count for Distribution Lists</title>
-      <link>http://localhost:65392/posts/dls_members_count/</link>
+      <link>http://localhost:1313/posts/dls_members_count/</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:65392/posts/dls_members_count/</guid>
+      <guid>http://localhost:1313/posts/dls_members_count/</guid>
       <description>How to Count All Members in a Distribution List (Including Nested Groups)</description>
     </item>
     <item>
       <title>When PowerAutomate Can&#39;t Regex - Let AI Do The Parsing</title>
-      <link>http://localhost:65392/posts/power_automate_ai/</link>
+      <link>http://localhost:1313/posts/power_automate_ai/</link>
       <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:65392/posts/power_automate_ai/</guid>
+      <guid>http://localhost:1313/posts/power_automate_ai/</guid>
       <description>How to use AI prompts in Power Automate to extract data from emails when regex isn&amp;#39;t an option</description>
     </item>
     <item>
       <title>Assign licenses in bulk via Graph API</title>
-      <link>http://localhost:65392/posts/license_assign_graph/</link>
+      <link>http://localhost:1313/posts/license_assign_graph/</link>
       <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:65392/posts/license_assign_graph/</guid>
+      <guid>http://localhost:1313/posts/license_assign_graph/</guid>
       <description>&lt;p&gt;Add:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -53,13 +64,13 @@
     </item>
     <item>
       <title>Force Removal Orphaned Contact in Microsoft 365</title>
-      <link>http://localhost:65392/posts/mail_contact_delete/</link>
+      <link>http://localhost:1313/posts/mail_contact_delete/</link>
       <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:65392/posts/mail_contact_delete/</guid>
+      <guid>http://localhost:1313/posts/mail_contact_delete/</guid>
       <description>&lt;h2 id=&#34;the-problem&#34;&gt;The Problem&lt;/h2&gt;
 &lt;p&gt;Classic Exchange Online scenario - trying to remove an orphaned (maybe used to be synced) object.&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:65392/images/contact_removal_error.png&#34;
+    &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/contact_removal_error.png&#34;
          alt=&#34;Error message when trying to remove contact&#34;/&gt; &lt;figcaption&gt;
             &lt;p&gt;Getting slapped in the face with error&lt;/p&gt;
         &lt;/figcaption&gt;
@@ -83,13 +94,13 @@
     </item>
     <item>
       <title>How to Get Rid of Power Apps Permissions Consent Form</title>
-      <link>http://localhost:65392/posts/power_apps_consent/</link>
+      <link>http://localhost:1313/posts/power_apps_consent/</link>
       <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:65392/posts/power_apps_consent/</guid>
+      <guid>http://localhost:1313/posts/power_apps_consent/</guid>
       <description>&lt;h2 id=&#34;permissions-consent-pop-up&#34;&gt;Permissions Consent Pop-up&lt;/h2&gt;
 &lt;p&gt;Every new user must approve permissions when accessing an app. Existing users see this prompt again after app logic or connector updates.&lt;/p&gt;
 &lt;figure&gt;
-     &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:65392/images/consent.png&#34;
+     &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/consent.png&#34;
           alt=&#34;Power Apps Grant Consent&#34;/&gt; &lt;figcaption&gt;
              &lt;p&gt;App permissions consent pop-up&lt;/p&gt;
          &lt;/figcaption&gt;
@@ -108,12 +119,12 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;Expected result:
 &lt;figure&gt;
-     &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:65392/images/bypass_result.png&#34;
+     &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/bypass_result.png&#34;
           alt=&#34;Power Apps Grant Consent&#34;/&gt; 
  &lt;/figure&gt;
 
 &lt;figure&gt;
-     &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:65392/images/bypass.png&#34;
+     &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/bypass.png&#34;
           alt=&#34;Power Apps Grant Consent&#34;/&gt; &lt;figcaption&gt;
              &lt;p&gt;BypassConsent flag is set&lt;/p&gt;
          &lt;/figcaption&gt;
@@ -123,9 +134,9 @@
     </item>
     <item>
       <title>Assign Calendar Permissions in Bulk</title>
-      <link>http://localhost:65392/posts/room_perm_bulk/</link>
+      <link>http://localhost:1313/posts/room_perm_bulk/</link>
       <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:65392/posts/room_perm_bulk/</guid>
+      <guid>http://localhost:1313/posts/room_perm_bulk/</guid>
       <description>&lt;h2 id=&#34;just-a-simple-one-liner&#34;&gt;Just a simple one-liner&lt;/h2&gt;
 &lt;p&gt;When you have many room mailboxes, granting someone access to each room calendar one-by-one is painful. This one-liner reads a list of room SMTP addresses from a text file and applies the same permission to each mailbox calendar.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -154,9 +165,9 @@
     </item>
     <item>
       <title>Updating Distribution List Extended Attributes with PowerShell</title>
-      <link>http://localhost:65392/posts/msatt20/</link>
+      <link>http://localhost:1313/posts/msatt20/</link>
       <pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:65392/posts/msatt20/</guid>
+      <guid>http://localhost:1313/posts/msatt20/</guid>
       <description>&lt;h2 id=&#34;the-easy-part&#34;&gt;The easy part&lt;/h2&gt;
 &lt;p&gt;Creating distribution lists in bulk is quite simple.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Just a CSV file:&lt;/strong&gt;&lt;/p&gt;

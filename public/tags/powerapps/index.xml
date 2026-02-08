@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Powerapps on SomethingWentWrong.dev</title>
-    <link>http://localhost:65392/tags/powerapps/</link>
+    <link>http://localhost:61585/tags/powerapps/</link>
     <description>Recent content in Powerapps on SomethingWentWrong.dev</description>
     <generator>Hugo -- 0.153.2</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 11 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:65392/tags/powerapps/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:61585/tags/powerapps/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Get Rid of Power Apps Permissions Consent Form</title>
-      <link>http://localhost:65392/posts/power_apps_consent/</link>
+      <link>http://localhost:61585/posts/power_apps_consent/</link>
       <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:65392/posts/power_apps_consent/</guid>
+      <guid>http://localhost:61585/posts/power_apps_consent/</guid>
       <description>&lt;h2 id=&#34;permissions-consent-pop-up&#34;&gt;Permissions Consent Pop-up&lt;/h2&gt;
 &lt;p&gt;Every new user must approve permissions when accessing an app. Existing users see this prompt again after app logic or connector updates.&lt;/p&gt;
 &lt;figure&gt;
-     &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:65392/images/consent.png&#34;
+     &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:61585/images/consent.png&#34;
           alt=&#34;Power Apps Grant Consent&#34;/&gt; &lt;figcaption&gt;
              &lt;p&gt;App permissions consent pop-up&lt;/p&gt;
          &lt;/figcaption&gt;
@@ -35,12 +35,12 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;Expected result:
 &lt;figure&gt;
-     &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:65392/images/bypass_result.png&#34;
+     &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:61585/images/bypass_result.png&#34;
           alt=&#34;Power Apps Grant Consent&#34;/&gt; 
  &lt;/figure&gt;
 
 &lt;figure&gt;
-     &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:65392/images/bypass.png&#34;
+     &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:61585/images/bypass.png&#34;
           alt=&#34;Power Apps Grant Consent&#34;/&gt; &lt;figcaption&gt;
              &lt;p&gt;BypassConsent flag is set&lt;/p&gt;
          &lt;/figcaption&gt;

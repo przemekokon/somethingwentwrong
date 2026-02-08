@@ -2,24 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Graph-Api on SomethingWentWrong.dev</title>
-    <link>http://localhost:65392/tags/graph-api/</link>
+    <link>http://localhost:61585/tags/graph-api/</link>
     <description>Recent content in Graph-Api on SomethingWentWrong.dev</description>
     <generator>Hugo -- 0.153.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:65392/tags/graph-api/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:61585/tags/graph-api/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Get SP item ID</title>
+      <link>http://localhost:61585/posts/get_sp_item_id/</link>
+      <pubDate>Sun, 08 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:61585/posts/get_sp_item_id/</guid>
+      <description>&lt;p&gt;Sometimes in script you would like to for example write something to an excel file using graph api - for this purpose you will need to know a file ID - as you cannot just specify a file path..&lt;/p&gt;
+&lt;p&gt;here&amp;rsquo;s how to&lt;/p&gt;
+&lt;p&gt;In my example we are going to get an ID of this file:
+&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:61585/images/sp_id_general.png&#34;
+         alt=&#34;some file&#34;/&gt; &lt;figcaption&gt;
+            &lt;p&gt;important file about cats&#39;&lt;/p&gt;
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;first we need to know a sharepoint site ID, there is a few options to get this, I like the simple one&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Recursive Member Count for Distribution Lists</title>
-      <link>http://localhost:65392/posts/dls_members_count/</link>
+      <link>http://localhost:61585/posts/dls_members_count/</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:65392/posts/dls_members_count/</guid>
+      <guid>http://localhost:61585/posts/dls_members_count/</guid>
       <description>How to Count All Members in a Distribution List (Including Nested Groups)</description>
     </item>
     <item>
       <title>Assign licenses in bulk via Graph API</title>
-      <link>http://localhost:65392/posts/license_assign_graph/</link>
+      <link>http://localhost:61585/posts/license_assign_graph/</link>
       <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:65392/posts/license_assign_graph/</guid>
+      <guid>http://localhost:61585/posts/license_assign_graph/</guid>
       <description>&lt;p&gt;Add:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -46,13 +63,13 @@
     </item>
     <item>
       <title>Force Removal Orphaned Contact in Microsoft 365</title>
-      <link>http://localhost:65392/posts/mail_contact_delete/</link>
+      <link>http://localhost:61585/posts/mail_contact_delete/</link>
       <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:65392/posts/mail_contact_delete/</guid>
+      <guid>http://localhost:61585/posts/mail_contact_delete/</guid>
       <description>&lt;h2 id=&#34;the-problem&#34;&gt;The Problem&lt;/h2&gt;
 &lt;p&gt;Classic Exchange Online scenario - trying to remove an orphaned (maybe used to be synced) object.&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:65392/images/contact_removal_error.png&#34;
+    &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:61585/images/contact_removal_error.png&#34;
          alt=&#34;Error message when trying to remove contact&#34;/&gt; &lt;figcaption&gt;
             &lt;p&gt;Getting slapped in the face with error&lt;/p&gt;
         &lt;/figcaption&gt;

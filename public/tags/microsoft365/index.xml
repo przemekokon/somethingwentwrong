@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Microsoft365 on SomethingWentWrong.dev</title>
-    <link>http://localhost:65392/tags/microsoft365/</link>
+    <link>http://localhost:61585/tags/microsoft365/</link>
     <description>Recent content in Microsoft365 on SomethingWentWrong.dev</description>
     <generator>Hugo -- 0.153.2</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 26 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:65392/tags/microsoft365/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:61585/tags/microsoft365/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Assign licenses in bulk via Graph API</title>
-      <link>http://localhost:65392/posts/license_assign_graph/</link>
+      <link>http://localhost:61585/posts/license_assign_graph/</link>
       <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:65392/posts/license_assign_graph/</guid>
+      <guid>http://localhost:61585/posts/license_assign_graph/</guid>
       <description>&lt;p&gt;Add:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -39,13 +39,13 @@
     </item>
     <item>
       <title>Force Removal Orphaned Contact in Microsoft 365</title>
-      <link>http://localhost:65392/posts/mail_contact_delete/</link>
+      <link>http://localhost:61585/posts/mail_contact_delete/</link>
       <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:65392/posts/mail_contact_delete/</guid>
+      <guid>http://localhost:61585/posts/mail_contact_delete/</guid>
       <description>&lt;h2 id=&#34;the-problem&#34;&gt;The Problem&lt;/h2&gt;
 &lt;p&gt;Classic Exchange Online scenario - trying to remove an orphaned (maybe used to be synced) object.&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:65392/images/contact_removal_error.png&#34;
+    &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:61585/images/contact_removal_error.png&#34;
          alt=&#34;Error message when trying to remove contact&#34;/&gt; &lt;figcaption&gt;
             &lt;p&gt;Getting slapped in the face with error&lt;/p&gt;
         &lt;/figcaption&gt;
