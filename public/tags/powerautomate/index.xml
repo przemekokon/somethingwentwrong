@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Powerautomate on SomethingWentWrong.dev</title>
-    <link>http://localhost:1313/tags/powerautomate/</link>
+    <link>http://localhost:55990/tags/powerautomate/</link>
     <description>Recent content in Powerautomate on SomethingWentWrong.dev</description>
     <generator>Hugo -- 0.153.2</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 03 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/powerautomate/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:55990/tags/powerautomate/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>When PowerAutomate Can&#39;t Regex - Let AI Do The Parsing</title>
-      <link>http://localhost:1313/posts/power_automate_ai/</link>
+      <link>http://localhost:55990/posts/power_automate_ai/</link>
       <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/power_automate_ai/</guid>
+      <guid>http://localhost:55990/posts/power_automate_ai/</guid>
       <description>How to use AI prompts in Power Automate to extract data from emails when regex isn&amp;#39;t an option</description>
     </item>
   </channel>

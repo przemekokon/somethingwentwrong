@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>On-Prem on SomethingWentWrong.dev</title>
-    <link>http://localhost:1313/tags/on-prem/</link>
+    <link>http://localhost:55990/tags/on-prem/</link>
     <description>Recent content in On-Prem on SomethingWentWrong.dev</description>
     <generator>Hugo -- 0.153.2</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 02 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/on-prem/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:55990/tags/on-prem/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Updating Distribution List Extended Attributes with PowerShell</title>
-      <link>http://localhost:1313/posts/msatt20/</link>
+      <link>http://localhost:55990/posts/msatt20/</link>
       <pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/msatt20/</guid>
+      <guid>http://localhost:55990/posts/msatt20/</guid>
       <description>&lt;h2 id=&#34;the-easy-part&#34;&gt;The easy part&lt;/h2&gt;
 &lt;p&gt;Creating distribution lists in bulk is quite simple.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Just a CSV file:&lt;/strong&gt;&lt;/p&gt;

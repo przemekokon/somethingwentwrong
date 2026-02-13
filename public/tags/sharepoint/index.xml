@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Sharepoint on SomethingWentWrong.dev</title>
-    <link>http://localhost:1313/tags/sharepoint/</link>
+    <link>http://localhost:55990/tags/sharepoint/</link>
     <description>Recent content in Sharepoint on SomethingWentWrong.dev</description>
     <generator>Hugo -- 0.153.2</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 08 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/sharepoint/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:55990/tags/sharepoint/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Get SharePoint Item ID Using Microsoft Graph API</title>
-      <link>http://localhost:1313/posts/get_sp_item_id/</link>
+      <link>http://localhost:55990/posts/get_sp_item_id/</link>
       <pubDate>Sun, 08 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/get_sp_item_id/</guid>
+      <guid>http://localhost:55990/posts/get_sp_item_id/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;When working with Microsoft Graph API to automate SharePoint operations (like writing script outputs, saving reports, updating Excel files), we can&amp;rsquo;t just use file paths. We need to work with unique identifiers - specifically - the file ID.&lt;/p&gt;
 &lt;p&gt;This guide walks you through the process of finding a SharePoint item ID by navigating the site hierarchy using Graph API Explorer.&lt;/p&gt;

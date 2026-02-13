@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Microsoft-Graph on SomethingWentWrong.dev</title>
-    <link>http://localhost:55990/tags/microsoft-graph/</link>
-    <description>Recent content in Microsoft-Graph on SomethingWentWrong.dev</description>
+    <title>Entra-Id on SomethingWentWrong.dev</title>
+    <link>http://localhost:55990/tags/entra-id/</link>
+    <description>Recent content in Entra-Id on SomethingWentWrong.dev</description>
     <generator>Hugo -- 0.153.2</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 13 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:55990/tags/microsoft-graph/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:55990/tags/entra-id/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creating and configuring Entra Extension Attributes</title>
       <link>http://localhost:55990/posts/new_azure_ext_attribute/</link>
@@ -26,17 +26,6 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;2-create-a-service-principal&#34;&gt;2. Create a Service Principal&lt;/h2&gt;
 &lt;p&gt;This is a critical step that is often overlooked. Without a Service Principal, the extension attributes are defined but cannot be used — the application exists only as a definition, not as an active entity in your tenant. Attempting to set an attribute without this step will result in the following error:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>How to Get SharePoint Item ID Using Microsoft Graph API</title>
-      <link>http://localhost:55990/posts/get_sp_item_id/</link>
-      <pubDate>Sun, 08 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:55990/posts/get_sp_item_id/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;When working with Microsoft Graph API to automate SharePoint operations (like writing script outputs, saving reports, updating Excel files), we can&amp;rsquo;t just use file paths. We need to work with unique identifiers - specifically - the file ID.&lt;/p&gt;
-&lt;p&gt;This guide walks you through the process of finding a SharePoint item ID by navigating the site hierarchy using Graph API Explorer.&lt;/p&gt;
-&lt;h2 id=&#34;the-goal&#34;&gt;The Goal&lt;/h2&gt;
-&lt;p&gt;In this example, we&amp;rsquo;ll find the ID of an Excel file located deep within a SharePoint site structure:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
