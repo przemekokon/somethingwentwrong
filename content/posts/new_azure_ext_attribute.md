@@ -10,7 +10,7 @@ Microsoft Exchange spoiled us - mail-enabled objects always had a set of custom 
 
 ## 1. Create an Application Registration
 
-Application Registration works s a namespace for an extension attributes.
+Application Registration works as the namespace for extension attributes.
 ```powershell
 New-MgApplication -DisplayName "Extension Attribute Sample Application" -SignInAudience AzureADMyOrg
 ```
