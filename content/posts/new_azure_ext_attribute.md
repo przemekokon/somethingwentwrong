@@ -6,16 +6,18 @@ tags: ["powershell", "microsoft-graph", "entra-id"]
 showtoc: false
 ---
 
-Exchange has spoiled us - mail-enabled objects always had a set of custom attributes ready to use out of the box. Entra ID is less generous, you have to extend the schema yourself from scratch.
+Microsoft Exchange spoiled us - mail-enabled objects always had a set of custom attributes ready to use out of the box. Entra ID is less generous, you have to extend the schema yourself from scratch.
 
 ## 1. Create an Application Registration
 
-Application Registration as a namespace for an extension attributes.
+Application Registration works s a namespace for an extension attributes.
 ```powershell
 New-MgApplication -DisplayName "Extension Attribute Sample Application" -SignInAudience AzureADMyOrg
 ```
 
 ## 2. Create an Extension Property
+
+Now we create an attribute itself.
 ```powershell
 New-MgApplicationExtensionProperty -ApplicationId <Id> -Name "Att1" -DataType String -TargetObjects @("Group")
 ```
