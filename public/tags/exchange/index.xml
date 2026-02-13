@@ -2,45 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Exchange on SomethingWentWrong.dev</title>
-    <link>http://localhost:61585/tags/exchange/</link>
+    <link>http://localhost:1313/tags/exchange/</link>
     <description>Recent content in Exchange on SomethingWentWrong.dev</description>
     <generator>Hugo -- 0.153.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:61585/tags/exchange/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Get SP item ID</title>
-      <link>http://localhost:61585/posts/get_sp_item_id/</link>
-      <pubDate>Sun, 08 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:61585/posts/get_sp_item_id/</guid>
-      <description>&lt;p&gt;Sometimes in script you would like to for example write something to an excel file using graph api - for this purpose you will need to know a file ID - as you cannot just specify a file path..&lt;/p&gt;
-&lt;p&gt;here&amp;rsquo;s how to&lt;/p&gt;
-&lt;p&gt;In my example we are going to get an ID of this file:
-&lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:61585/images/sp_id_general.png&#34;
-         alt=&#34;some file&#34;/&gt; &lt;figcaption&gt;
-            &lt;p&gt;important file about cats&#39;&lt;/p&gt;
-        &lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;first we need to know a sharepoint site ID, there is a few options to get this, I like the simple one&lt;/p&gt;</description>
-    </item>
+    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/exchange/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Recursive Member Count for Distribution Lists</title>
-      <link>http://localhost:61585/posts/dls_members_count/</link>
+      <link>http://localhost:1313/posts/dls_members_count/</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:61585/posts/dls_members_count/</guid>
+      <guid>http://localhost:1313/posts/dls_members_count/</guid>
       <description>How to Count All Members in a Distribution List (Including Nested Groups)</description>
     </item>
     <item>
       <title>Force Removal Orphaned Contact in Microsoft 365</title>
-      <link>http://localhost:61585/posts/mail_contact_delete/</link>
+      <link>http://localhost:1313/posts/mail_contact_delete/</link>
       <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:61585/posts/mail_contact_delete/</guid>
+      <guid>http://localhost:1313/posts/mail_contact_delete/</guid>
       <description>&lt;h2 id=&#34;the-problem&#34;&gt;The Problem&lt;/h2&gt;
 &lt;p&gt;Classic Exchange Online scenario - trying to remove an orphaned (maybe used to be synced) object.&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:61585/images/contact_removal_error.png&#34;
+    &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/contact_removal_error.png&#34;
          alt=&#34;Error message when trying to remove contact&#34;/&gt; &lt;figcaption&gt;
             &lt;p&gt;Getting slapped in the face with error&lt;/p&gt;
         &lt;/figcaption&gt;
@@ -64,9 +47,9 @@
     </item>
     <item>
       <title>Assign Calendar Permissions in Bulk</title>
-      <link>http://localhost:61585/posts/room_perm_bulk/</link>
+      <link>http://localhost:1313/posts/room_perm_bulk/</link>
       <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:61585/posts/room_perm_bulk/</guid>
+      <guid>http://localhost:1313/posts/room_perm_bulk/</guid>
       <description>&lt;h2 id=&#34;just-a-simple-one-liner&#34;&gt;Just a simple one-liner&lt;/h2&gt;
 &lt;p&gt;When you have many room mailboxes, granting someone access to each room calendar one-by-one is painful. This one-liner reads a list of room SMTP addresses from a text file and applies the same permission to each mailbox calendar.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -95,9 +78,9 @@
     </item>
     <item>
       <title>Updating Distribution List Extended Attributes with PowerShell</title>
-      <link>http://localhost:61585/posts/msatt20/</link>
+      <link>http://localhost:1313/posts/msatt20/</link>
       <pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:61585/posts/msatt20/</guid>
+      <guid>http://localhost:1313/posts/msatt20/</guid>
       <description>&lt;h2 id=&#34;the-easy-part&#34;&gt;The easy part&lt;/h2&gt;
 &lt;p&gt;Creating distribution lists in bulk is quite simple.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Just a CSV file:&lt;/strong&gt;&lt;/p&gt;

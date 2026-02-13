@@ -14,8 +14,8 @@
       <pubDate>Sun, 08 Feb 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/get_sp_item_id/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;When working with Microsoft Graph API to automate SharePoint operations (like writing data to an Excel file), you&amp;rsquo;ll quickly discover that you can&amp;rsquo;t just use file paths. Instead, you need to work with unique identifiers - specifically, the file&amp;rsquo;s ID.&lt;/p&gt;
-&lt;p&gt;This guide walks you through the process of finding a SharePoint item ID by navigating the site hierarchy using Graph API.&lt;/p&gt;
+&lt;p&gt;When working with Microsoft Graph API to automate SharePoint operations (like writing script outputs, saving reports, updating Excel files), we can&amp;rsquo;t just use file paths. We need to work with unique identifiers - specifically - the file ID.&lt;/p&gt;
+&lt;p&gt;This guide walks you through the process of finding a SharePoint item ID by navigating the site hierarchy using Graph API Explorer.&lt;/p&gt;
 &lt;h2 id=&#34;the-goal&#34;&gt;The Goal&lt;/h2&gt;
 &lt;p&gt;In this example, we&amp;rsquo;ll find the ID of an Excel file located deep within a SharePoint site structure:&lt;/p&gt;</description>
     </item>

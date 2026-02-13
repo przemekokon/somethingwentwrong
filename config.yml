@@ -44,7 +44,7 @@ params:
     
   label:
     text: "SomethingWentWrong.dev"
-    icon: /favicon.ico
+    #icon: /favicon.ico
     iconHeight: 35
 
   homeInfoParams:
