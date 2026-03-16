@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Entra on SomethingWentWrong.dev</title>
+    <link>http://localhost:1313/tags/entra/</link>
+    <description>Recent content in Entra on SomethingWentWrong.dev</description>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/entra/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Remove/Update Proxy Addresses for Cloud Only Object</title>
+      <link>http://localhost:1313/posts/proxy_removal_graph/</link>
+      <pubDate>Mon, 16 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/proxy_removal_graph/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

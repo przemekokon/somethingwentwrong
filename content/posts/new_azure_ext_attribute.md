@@ -1,71 +1,118 @@
----
-title: "Creating and Configuring Entra Extension Attributes"
-date: 2026-02-13
-draft: false
-tags: ["powershell", "microsoft-graph", "entra-id"]
-showtoc: false
----
+<#
+.SYNOPSIS
+    Adds users from a TXT file to an Entra ID Group via Microsoft Graph.
 
-Microsoft Exchange spoiled us - mail-enabled objects always had a set of custom attributes ready to use out of the box. Entra ID is less generous, you have to extend the schema yourself from scratch.
+.DESCRIPTION
+    The script reads UPNs from a text file, resolves each user (first by UPN,
+    then by mail as fallback), and adds them to the specified group.
+    Works with both Security Groups and Microsoft 365 Groups.
 
-## 1. Create an Application Registration
+.PARAMETER GroupId
+    Object ID of the target Entra ID Group.
 
-Application Registration works as the namespace for extension attributes.
-```powershell
-New-MgApplication -DisplayName "Extension Attribute Sample Application" -SignInAudience AzureADMyOrg
-```
+.PARAMETER FilePath
+    Path to the TXT file containing one UPN per line.
 
-## 2. Create an Extension Property
+.EXAMPLE
+    .\Add-GroupMembers.ps1 -GroupId "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" -FilePath ".\users.txt"
+#>
 
-Now we create an attribute itself.
-```powershell
-New-MgApplicationExtensionProperty -ApplicationId <Id> -Name "Att1" -DataType String -TargetObjects @("Group")
-```
+[CmdletBinding()]
+param (
+    [Parameter(Mandatory, HelpMessage = "Object ID of the target Entra ID Group")]
+    [string]$GroupId,
 
-## 3. Create a Service Principal
+    [Parameter(Mandatory, HelpMessage = "Path to the TXT file with UPNs (one per line)")]
+    [ValidateScript({ Test-Path $_ -PathType Leaf })]
+    [string]$FilePath
+)
 
-Without a Service Principal, the extension attributes are defined but cannot be used - the application exists only as a 'definition', not as an active entity in your tenant.
-```powershell
-New-MgServicePrincipal -AppId <AppId>
-```
+# --- Connect to Graph if not already connected ---
+try {
+    $null = Get-MgContext -ErrorAction Stop
+}
+catch {
+    Write-Host "Connecting to Microsoft Graph..." -ForegroundColor Cyan
+    Connect-MgGraph -Scopes "Group.ReadWrite.All", "User.Read.All", "Directory.ReadWrite.All"
+}
 
-## 4. Verify the Extension Property
-```powershell
-Get-MgApplicationExtensionProperty -ApplicationId <Id> | ft Name
-```
+# --- Validate that the group exists before processing ---
+Write-Host "`nValidating group ID..." -ForegroundColor Cyan
+try {
+    $group = Get-MgGroup -GroupId $GroupId -ErrorAction Stop
+    Write-Host "Target group: $($group.DisplayName)" -ForegroundColor Green
+}
+catch {
+    Write-Error "Could not find group with ID: $GroupId. Aborting."
+    exit 1
+}
 
-The extension attribute name follows this convention:
-```
-extension_{ServicePrincipalObjectIdWithoutHyphens}_{AttributeName}
-```
+# --- Read UPNs from file, skip empty lines ---
+$upnList = Get-Content $FilePath | Where-Object { $_.Trim() -ne "" }
+$total   = $upnList.Count
+Write-Host "Users to process: $total`n" -ForegroundColor Cyan
 
-Example:
-```
-extension_0bff5cf1c92f438e95aaab5fc59c0743_Att1
-```
+# --- Counters for summary ---
+$added    = 0
+$skipped  = 0
+$notFound = 0
+$index    = 0
 
-## 5. Set the Attribute on a Group
+foreach ($entry in $upnList) {
 
-Prepare the body parameter using the full extension attribute name:
-```powershell
-$att1 = @{extension_0bff5cf1c92f438e95aaab5fc59c0743_Att1 = "Sample Value"}
-```
+    $index++
+    $entry = $entry.Trim()
+    $user  = $null
 
-Update the group:
-```powershell
-Update-MgGroup -GroupId <GroupId> -BodyParameter $att1
-```
+    # Update progress bar
+    Write-Progress -Activity "Adding users to: $($group.DisplayName)" `
+                   -Status "Processing $index of $total : $entry" `
+                   -PercentComplete (($index / $total) * 100)
 
-## 6. Verify the Result
-```powershell
-(Get-MgGroup -GroupId <GroupId>).AdditionalProperties | ft
-```
+    # Step 1: Try to resolve user by UPN
+    $user = Get-MgUser -UserId $entry -ErrorAction SilentlyContinue
 
-## How it all fits together
+    # Step 2: Fallback - try to find user by mail attribute
+    if (-not $user) {
+        Write-Warning "UPN not found: '$entry' - trying mail fallback..."
+        $user = Get-MgUser -Filter "mail eq '$entry'" -ErrorAction SilentlyContinue |
+                Select-Object -First 1
+    }
 
-{{< figure src="/images/ext_attribute.png" alt="Entra ID Extension Attributes - complete workflow" caption="The arrows show how Application ID and AppId flow through the subsequent commands" >}}
+    # Step 3: Still not found - log and skip
+    if (-not $user) {
+        Write-Warning "User not found (UPN or mail): '$entry' - skipping."
+        $notFound++
+        continue
+    }
 
-## Notes
+    # Step 4: Check if user is already a member (avoids errors on duplicate add)
+    $isMember = Get-MgGroupMember -GroupId $GroupId -Filter "id eq '$($user.Id)'" -ErrorAction SilentlyContinue
+    if ($isMember) {
+        Write-Host "  [SKIP] $($user.UserPrincipalName) is already a member." -ForegroundColor Yellow
+        $skipped++
+        continue
+    }
 
-- After creating the Service Principal, wait a few minutes for sync, before attempting to set any attribute values
-- Step 2's `-TargetObjects` parameter supports multiple object types: `User`, `Group`, `AdministrativeUnit`, `Application`, `Device`, and `Organization`
+    # Step 5: Add user to the group
+    try {
+        New-MgGroupMemberByRef -GroupId $GroupId -BodyParameter @{
+            "@odata.id" = "https://graph.microsoft.com/v1.0/directoryObjects/$($user.Id)"
+        }
+        Write-Host "  [OK]   $($user.UserPrincipalName) added successfully." -ForegroundColor Green
+        $added++
+    }
+    catch {
+        Write-Warning "Failed to add $($user.UserPrincipalName): $_"
+        $notFound++
+    }
+}
+
+# --- Clear progress bar after completion ---
+Write-Progress -Activity "Adding users to: $($group.DisplayName)" -Completed
+
+# --- Summary ---
+Write-Host "`n--- Summary ---" -ForegroundColor Cyan
+Write-Host "Added:     $added"    -ForegroundColor Green
+Write-Host "Skipped:   $skipped"  -ForegroundColor Yellow
+Write-Host "Not found: $notFound" -ForegroundColor Red
