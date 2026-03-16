@@ -6,8 +6,18 @@
     <description>Recent content in Exchange on SomethingWentWrong.dev</description>
     <generator>Hugo -- 0.153.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/exchange/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Search Objects Tenant By Domain</title>
+      <link>http://localhost:1313/posts/search-tenant-by-domain/</link>
+      <pubDate>Mon, 16 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/search-tenant-by-domain/</guid>
+      <description>&lt;h2 id=&#34;domain-removal-issues&#34;&gt;Domain Removal issues&lt;/h2&gt;
+&lt;p&gt;If you remove a domain from M365 tenant, you should deprovision all objects first, easy to say.&lt;/p&gt;
+&lt;p&gt;If domain is not federated, then M365 can do it for you - it just removes aliases and updates PrimarySMTP or UPN into default domain (domain.onmicrosoft.com).&lt;/p&gt;
+&lt;p&gt;But it doesn&amp;rsquo;t work for federated domains, you have to remove everything on your own, it&amp;rsquo;s easy for one domain, imagine, I had to remove 150.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Recursive Member Count for Distribution Lists</title>
       <link>http://localhost:1313/posts/dls_members_count/</link>

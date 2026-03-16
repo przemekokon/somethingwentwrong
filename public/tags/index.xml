@@ -16,6 +16,13 @@
       <description></description>
     </item>
     <item>
+      <title>Exchange</title>
+      <link>http://localhost:1313/tags/exchange/</link>
+      <pubDate>Mon, 16 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/exchange/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Graph-Api</title>
       <link>http://localhost:1313/tags/graph-api/</link>
       <pubDate>Mon, 16 Mar 2026 00:00:00 +0000</pubDate>
@@ -41,13 +48,6 @@
       <link>http://localhost:1313/tags/sharepoint/</link>
       <pubDate>Sun, 08 Feb 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/sharepoint/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Exchange</title>
-      <link>http://localhost:1313/tags/exchange/</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/exchange/</guid>
       <description></description>
     </item>
     <item>
@@ -90,20 +90,6 @@
       <link>http://localhost:1313/tags/on-prem/</link>
       <pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/on-prem/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Entra</title>
-      <link>http://localhost:1313/tags/entra/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/entra/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Graphapi</title>
-      <link>http://localhost:1313/tags/graphapi/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/graphapi/</guid>
       <description></description>
     </item>
   </channel>

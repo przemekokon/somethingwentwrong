@@ -9,11 +9,62 @@
     <lastBuildDate>Mon, 16 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>How to Remove/Update Proxy Addresses for Cloud Only Object</title>
+      <title>How to Update Proxy Addresses for a Cloud-Only Object</title>
       <link>http://localhost:1313/posts/proxy_removal_graph/</link>
       <pubDate>Mon, 16 Mar 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/proxy_removal_graph/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;If you want to add or remove (basically update) a proxy address on a cloud-only account - without an Exchange mailbox - you cannot.&lt;/p&gt;
+&lt;p&gt;There is no such option in the GUI and PowerShell won&amp;rsquo;t allow it either, throwing an error:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Set-MgUser : Property &amp;#39;proxyAddresses&amp;#39; is read-only and cannot be set.
+Status: 400 (BadRequest)
+ErrorCode: Request_BadRequest
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;Use the Graph API &lt;strong&gt;BETA&lt;/strong&gt; endpoint.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Method:&lt;/strong&gt; PATCH&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;URL:&lt;/strong&gt; &lt;code&gt;https://graph.microsoft.com/beta/users/&amp;lt;User_ID&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Request Body:&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;proxyAddresses&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;SMTP:PrimarySMTPAddress&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;smtp:Alias1&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;smtp:Alias2&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;smtp:Alias3&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Expected Response:&lt;/strong&gt; &lt;code&gt;204 No Content&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/proxy_update.png&#34;
+         alt=&#34;Graph Explorer&#34;/&gt; &lt;figcaption&gt;
+            &lt;p&gt;An example&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Search Objects Tenant By Domain</title>
+      <link>http://localhost:1313/posts/search-tenant-by-domain/</link>
+      <pubDate>Mon, 16 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/search-tenant-by-domain/</guid>
+      <description>&lt;h2 id=&#34;domain-removal-issues&#34;&gt;Domain Removal issues&lt;/h2&gt;
+&lt;p&gt;If you remove a domain from M365 tenant, you should deprovision all objects first, easy to say.&lt;/p&gt;
+&lt;p&gt;If domain is not federated, then M365 can do it for you - it just removes aliases and updates PrimarySMTP or UPN into default domain (domain.onmicrosoft.com).&lt;/p&gt;
+&lt;p&gt;But it doesn&amp;rsquo;t work for federated domains, you have to remove everything on your own, it&amp;rsquo;s easy for one domain, imagine, I had to remove 150.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Get SharePoint Item ID Using Microsoft Graph API</title>
