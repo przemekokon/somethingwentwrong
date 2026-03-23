@@ -6,8 +6,15 @@
     <description>Recent content on SomethingWentWrong.dev</description>
     <generator>Hugo -- 0.153.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Guest Account Invite Issue</title>
+      <link>http://localhost:1313/posts/guest_invite_issue/</link>
+      <pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/guest_invite_issue/</guid>
+      <description>Guest invite failing - Please configure B2B collaboration</description>
+    </item>
     <item>
       <title>How to Update Proxy Addresses for a Cloud-Only Object</title>
       <link>http://localhost:1313/posts/proxy_removal_graph/</link>

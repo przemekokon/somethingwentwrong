@@ -3,7 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/tags/entraid/</loc>
-    <lastmod>2026-03-16T00:00:00+00:00</lastmod>
+    <lastmod>2026-03-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/guest_invite_issue/</loc>
+    <lastmod>2026-03-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2026-03-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-03-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-03-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/exchange/</loc>
     <lastmod>2026-03-16T00:00:00+00:00</lastmod>
@@ -14,19 +26,10 @@
     <loc>http://localhost:1313/posts/proxy_removal_graph/</loc>
     <lastmod>2026-03-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2026-03-16T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/powershell/</loc>
     <lastmod>2026-03-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/search-tenant-by-domain/</loc>
-    <lastmod>2026-03-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2026-03-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2026-03-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/get_sp_item_id/</loc>
