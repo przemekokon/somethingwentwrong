@@ -21,3 +21,9 @@ user2@company.com,       Some Distribution List, some-dl@company.com,   Distribu
 ## Where's it?
 
 [On GitHub](https://github.com/przemekokon/Staff-from-blog/blob/main/Get-MgUserMemberOf.ps1)
+
+## Requirements
+
+- PowerShell 5.1+ or PowerShell 7+
+- Microsoft Graph PowerShell SDK
+- Permissions: `User.Read.All`, `GroupMember.Read.All`, `Group.Read.All`
