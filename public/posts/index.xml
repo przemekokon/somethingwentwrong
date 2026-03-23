@@ -13,7 +13,20 @@
       <link>http://localhost:1313/posts/guest_invite_issue/</link>
       <pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/guest_invite_issue/</guid>
-      <description>Guest invite failing with error: Entra B2B</description>
+      <description>Guest invite failing - Please configure B2B collaboration</description>
+    </item>
+    <item>
+      <title>Which groups do users belong to? A Graph API approach</title>
+      <link>http://localhost:1313/posts/get-mgusermemberof/</link>
+      <pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/get-mgusermemberof/</guid>
+      <description>&lt;h2 id=&#34;whats-that&#34;&gt;What&amp;rsquo;s that?&lt;/h2&gt;
+&lt;p&gt;Just another script for listing users and their group memberships.
+You feed it a text file with UPNs, it queries Microsoft Graph, and spits out a flat CSV like:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;mailto:user1@company.com&#34;&gt;user1@company.com&lt;/a&gt;, Some Distribution List, &lt;a href=&#34;mailto:some-dl@company.com&#34;&gt;some-dl@company.com&lt;/a&gt;, DistributionList
+&lt;a href=&#34;mailto:user1@company.com&#34;&gt;user1@company.com&lt;/a&gt;, Security Group ABC,    &lt;a href=&#34;mailto:sg-abc@company.com&#34;&gt;sg-abc@company.com&lt;/a&gt;,   MailSecurityGroup
+&lt;a href=&#34;mailto:user2@company.com&#34;&gt;user2@company.com&lt;/a&gt;, Some Distribution List, &lt;a href=&#34;mailto:some-dl@company.com&#34;&gt;some-dl@company.com&lt;/a&gt;, DistributionList&lt;/p&gt;
+&lt;p&gt;Pay atention for Excluded Groups (around line 40) - you can easily exclude Tenant wide dynamic groups like Guests All etc..&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Update Proxy Addresses for a Cloud-Only Object</title>
