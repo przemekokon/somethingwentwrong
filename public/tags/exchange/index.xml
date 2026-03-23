@@ -16,10 +16,48 @@
       <description>&lt;h2 id=&#34;whats-that&#34;&gt;What&amp;rsquo;s that?&lt;/h2&gt;
 &lt;p&gt;Just another script for listing users and their group memberships.
 You feed it a text file with UPNs, it queries Microsoft Graph, and spits out a flat CSV like:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;mailto:user1@company.com&#34;&gt;user1@company.com&lt;/a&gt;, Some Distribution List, &lt;a href=&#34;mailto:some-dl@company.com&#34;&gt;some-dl@company.com&lt;/a&gt;, DistributionList
-&lt;a href=&#34;mailto:user1@company.com&#34;&gt;user1@company.com&lt;/a&gt;, Security Group ABC,    &lt;a href=&#34;mailto:sg-abc@company.com&#34;&gt;sg-abc@company.com&lt;/a&gt;,   MailSecurityGroup
-&lt;a href=&#34;mailto:user2@company.com&#34;&gt;user2@company.com&lt;/a&gt;, Some Distribution List, &lt;a href=&#34;mailto:some-dl@company.com&#34;&gt;some-dl@company.com&lt;/a&gt;, DistributionList&lt;/p&gt;
-&lt;p&gt;Pay atention for Excluded Groups (around line 40) - you can easily exclude Tenant wide dynamic groups like Guests All etc..&lt;/p&gt;</description>
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;UserPrincipalName&lt;/th&gt;
+          &lt;th&gt;PrimarySmtpAddress&lt;/th&gt;
+          &lt;th&gt;GroupName&lt;/th&gt;
+          &lt;th&gt;GroupEmail&lt;/th&gt;
+          &lt;th&gt;GroupType&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;a href=&#34;mailto:user1@company.com&#34;&gt;user1@company.com&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;mailto:user1@company.com&#34;&gt;user1@company.com&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;Some Distribution List&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;mailto:some-dl@company.com&#34;&gt;some-dl@company.com&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;DistributionList&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;a href=&#34;mailto:user1@company.com&#34;&gt;user1@company.com&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;mailto:user1@company.com&#34;&gt;user1@company.com&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;Security Group ABC&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;mailto:sg-abc@company.com&#34;&gt;sg-abc@company.com&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;MailSecurityGroup&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;a href=&#34;mailto:user2@company.com&#34;&gt;user2@company.com&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;mailto:user2@company.com&#34;&gt;user2@company.com&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;Some Distribution List&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;mailto:some-dl@company.com&#34;&gt;some-dl@company.com&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;DistributionList&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;wheres-it&#34;&gt;Where&amp;rsquo;s it?&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/przemekokon/Staff-from-blog/blob/main/Get-MgUserMemberOf.ps1&#34;&gt;On GitHub&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;PowerShell 5.1+ or PowerShell 7+&lt;/li&gt;
+&lt;li&gt;Microsoft Graph PowerShell SDK&lt;/li&gt;
+&lt;li&gt;Permissions: &lt;code&gt;User.Read.All&lt;/code&gt;, &lt;code&gt;GroupMember.Read.All&lt;/code&gt;, &lt;code&gt;Group.Read.All&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Search Tenant Objects by Domain</title>

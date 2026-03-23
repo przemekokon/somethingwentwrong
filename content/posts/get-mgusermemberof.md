@@ -11,12 +11,11 @@ showtoc: false
 Just another script for listing users and their group memberships.
 You feed it a text file with UPNs, it queries Microsoft Graph, and spits out a flat CSV like:
 
-```csv
-UserPrincipalName,       GroupName,              GroupEmail,             GroupType
-user1@company.com,       Some Distribution List, some-dl@company.com,   DistributionList
-user1@company.com,       Security Group ABC,     sg-abc@company.com,    MailSecurityGroup
-user2@company.com,       Some Distribution List, some-dl@company.com,   DistributionList
-```
+| UserPrincipalName | PrimarySmtpAddress | GroupName | GroupEmail | GroupType |
+|---|---|---|---|---|
+| user1@abc.com | user1@abc.com | Some DL | some-dl@abc.com | DistributionList |
+| user1@abc.com | user1@abc.com | Security Group ABC | sg-abc@abc.com | MailSecurityGroup |
+| user2@abc.com | user2@abc.com | Some DL | some-dl@abc.com | DistributionList |
 
 ## Where's it?
 
